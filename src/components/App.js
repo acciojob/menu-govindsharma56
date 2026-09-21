@@ -23,9 +23,9 @@ const App = () => {
        <h2 style={{textAlign:"center",color:'blue'}}>Our Menu</h2>
        <div className='allbutton' style={{marginTop:'10px'}} >
               <button  onClick={()=>{handleClick('all')}}>All</button>
-              <button id='#filter-btn-2' onClick={()=>{handleClick('lunch')}}>Lunch</button>
-              <button id='#filter-btn-1' onClick={()=>{handleClick('breakfast')}}>Breakfast</button>
-              <button  id='#filter-btn-3'onClick={()=>{handleClick('shake')}}>Shake</button>
+              <button id='filter-btn-2' onClick={()=>{handleClick('lunch')}}>Lunch</button>
+              <button id='filter-btn-1' onClick={()=>{handleClick('breakfast')}}>Breakfast</button>
+              <button  id='filter-btn-3'onClick={()=>{handleClick('shakes')}}>Shake</button>
        </div>  
            <div className="section-center" style={{marginTop:'40px'}}>
               {display.map((item)=>(
