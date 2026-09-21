@@ -10,3 +10,185 @@ button{
     justify-content: center;
     align-items: center;
 }
+.allbutton{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap:20px;
+
+}
+.allbutton button{
+      color: burlywood;
+      font-weight: 800;
+      background: none;
+      border: none;
+      cursor: pointer;
+}/* ===== General Reset & Background ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: #f1f5f8;
+    color: #102a42;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* ===== Main Container ===== */
+#main {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== Header Section ===== */
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #102a42;
+}
+
+.underline {
+    width: 80px;
+    height: 4px;
+    background-color: #c59d5f;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+/* ===== Filter Buttons ===== */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: none;
+    color: #c59d5f;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+    letter-spacing: 1px;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #c59d5f;
+    color: white;
+}
+
+/* ===== 🔥 MENU GRID (Yeh sabse important hai) 🔥 ===== */
+.section-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 30px 40px;
+    width: 100%;
+    justify-items: stretch;
+}
+
+/* ===== Single Menu Item ===== */
+.menu-item {
+    display: flex !important;         /* 🔥 Force flex */
+    flex-direction: row !important;   /* 🔥 Image left, text right */
+    align-items: flex-start;
+    gap: 20px;
+    background: transparent;
+    width: 100%;
+}
+
+/* ===== Image Styling ===== */
+.photo {
+    width: 130px;
+    height: 100px;
+    object-fit: cover;
+    border: 4px solid #c59d5f;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; /* 🔥 Image shrink nahi hogi */
+}
+
+/* ===== Info Section ===== */
+.item-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* ===== Header (Title + Price) ===== */
+.item-info header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed #617d98;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+}
+
+.item-info h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #102a42;
+    margin: 0;
+}
+
+.price {
+    color: #c59d5f;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* ===== Description ===== */
+.item-text {
+    font-size: 0.9rem;
+    color: #617d98;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    margin-top: 5px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .section-center {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item {
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+    }
+
+    .photo {
+        width: 100%;
+        height: 200px;
+    }
+
+    .item-info header {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
